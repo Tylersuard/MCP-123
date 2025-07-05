@@ -227,4 +227,4 @@ Answer: 29
 
 ## 📬 Feedback & Contributions
 
-Pull requests and issues are welcome, as long as Pull Requests are in all-caps.
+Pull requests and issues are welcome, but only if they are in ALL-CAPS.
