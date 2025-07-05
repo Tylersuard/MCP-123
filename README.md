@@ -3,12 +3,6 @@ The easiest possible implementation of an MCP server and client.  Set up a serve
 
 ---
 
-## 🚀 Features
-- **Ultra-minimal setup**: Start a server or client in 2 lines.
-- **Easy tool creation**: Write normal functions in your `tools.py` file—**no decorators or special wrappers needed**—and they get included as tools that your MCP server can use automatically.
-- **OpenAI integration**: The client uses your OpenAI API key to answer questions, calling tools as needed.
----
-
 ## 🖥️ Quickstart
 
 ### 1. Install Requirements
@@ -56,6 +50,12 @@ client.close()
 ```
 
 ---
+## 🚀 Features
+- **Ultra-minimal setup**: Start a server or client in 2 lines.
+- **Easy tool creation**: Write normal functions in your `tools.py` file—**no decorators or special wrappers needed**—and they get included as tools that your MCP server can use automatically.
+- **OpenAI integration**: The client uses your OpenAI API key to answer questions, calling tools as needed.
+---
+
 
 ## 📝 How It Works
 
