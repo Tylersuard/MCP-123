@@ -10,16 +10,6 @@
   <img src="https://img.shields.io/badge/openai-ready-green" alt="OpenAI ready">
 </p>
 
-> **MCP-123** bundles a zero-boilerplate Model-Context-Protocol server *and* client.  
-> Drop in your functions ➜ run ➜ profit.
-
----
-
-# MCP-123
-
-The easiest possible implementation of an MCP server and client.  Set up a server or a client in 2 lines of code.
-
-
 
 ---
 
