@@ -1,7 +1,7 @@
 <h1 align="center">
   MCP-123
   <br>
-  <sub>The *easiest* way to run an MCP server & client (2 lines each)</sub>
+  <sub>The easiest way to run an MCP server & client (2 lines each)</sub>
 </h1>
 
 <p align="center">
