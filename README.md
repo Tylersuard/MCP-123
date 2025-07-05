@@ -19,7 +19,7 @@ pip install -r requirements.txt
 
 ### 2. Create Your Tools
 
-Define your functions in `tools.py`. For example:
+Define your functions in `tools.py`. No decorators needed, they are automatically added to your MCP server as tools. For example:
 
 ```python
 def add(a: int, b: int) -> int:
