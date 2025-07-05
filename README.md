@@ -1,7 +1,7 @@
 # MCP-123
 The easiest possible implementation of an MCP server and client.  Set up a server or a client in 2 lines of code.
 
-# 🧩 Minimal MCP Server & Client
+## 🧩 Minimal MCP Server & Client
 
 This project is the **simplest possible way** to set up a Model Context Protocol (MCP) Server and Client in Python. With just **2 lines of code**, you can launch a server that exposes your Python functions as tools, or a client that can discover and use them powered by OpenAI models.
 
