@@ -15,90 +15,226 @@
 
 ---
 
-## 🗂️ Table&nbsp;of&nbsp;Contents
-1. [Quick start](#️-quickstart)
-2. [Features](#-features)
-3. [How it works](#-how-it-works)
-4. [Example output](#️-example-output)
-5. [Requirements](#-requirements)
-6. [Why MCP-123?](#-why-mcp123)
-7. [Credits](#-credits)
-8. [Feedback](#-feedback--contributions)
+# MCP-123
+
+The easiest possible implementation of an MCP server and client.  Set up a server or a client in 2 lines of code.
+
+
 
 ---
 
+
+
+
+## 🚀 Features
+
+
+- **Ultra-minimal setup**: Start a server or client in 2 lines.
+
+
+- **Easy tool creation**: Write normal functions in your `tools.py` file—**no decorators or special wrappers needed**—and they get included as tools that your MCP server can use automatically.
+
+
+- **OpenAI integration**: The client uses your OpenAI API key to answer questions, calling tools as needed.
+
+
+---
+
+
+
+
 ## 🖥️ Quickstart
 
-### 1. Install
+
+
+### 1. Install Requirements
+
+
+
 ```bash
+
 pip install -r requirements.txt
 
-2. Create your tools (tools.py)
+```
+
+
+
+### 2. Create Your Tools
+
+
+
+Define your functions in `tools.py`. No decorators needed, they are automatically added to your MCP server as tools. For example:
+
+
+
+```python
 
 def add(a: int, b: int) -> int:
+
     """Add two numbers."""
+
     return a + b
 
-3. Start the server (2 lines)
+```
+
+
+
+### 3. Start the MCP Server (2 lines)
+
+
+
+```python
 
 from mcp123 import server
+
 server.run_server("tools.py", port=9999)
 
-4. Spin up the client (2 lines)
+```
+
+
+
+
+
+### 4. Set up the MCP Client (2 lines)
+
+
+
+```python
 
 from mcp123.client import McpClient
-client = McpClient("http://localhost:9999", "sk-...your-OpenAI-key...")
 
-5. Ask things
+client = McpClient("http://localhost:9999", "sk-...your OpenAI key...")
+
+```
+
+
+
+### 5. Use the MCP Client
+
+
+
+```
 
 answer = client.ask("Add 15 and 14.")
-print("Answer:", answer)  # ➜ 29
 
-6. Close when done
+print("Answer:", answer)
+
+```
+
+
+
+### 6. Close the MCP Client when you are done
+
+
+
+```
 
 client.close()
 
-🚀 Features
+```
 
-    Ultra-minimal setup – server or client in two lines.
 
-    Write plain functions – no decorators, schemas, or wrappers.
 
-    Automatic tool discovery – every top-level function in tools.py becomes an MCP tool.
+---
 
-    OpenAI-aware client – sends prompts, calls tools, streams answers.
 
-📝 How It Works
-Component	Responsibility
-Server	Imports tools.py, registers each top-level function as an MCP tool, serves over HTTP.
-Client	Discovers available tools, sends your prompt to OpenAI, executes tool calls when the model requests them, then returns the final answer.
-🛠️ Example Output
+## 🚀 Features
+
+
+- **Ultra-minimal setup**: Start a server or client in 2 lines.
+
+
+- **Easy tool creation**: Write normal functions in your `tools.py` file—**no decorators or special wrappers needed**—and they get included as tools that your MCP server can use automatically.
+
+
+- **OpenAI integration**: The client uses your OpenAI API key to answer questions, calling tools as needed.
+
+
+---
+
+
+
+
+
+
+## 📝 How It Works
+
+
+
+- **Server**: Loads all top-level functions from `tools.py` and exposes them as MCP tools via HTTP.
+
+- **Client**: Discovers available tools, sends prompts to OpenAI, and automatically calls tools if needed.
+
+
+
+---
+
+
+
+## 🛠️ Example Output
+
+
+
+When you run the client, you’ll see:
+
+
+
+```
 
 Tools discovered:
- [add, …]
+
+ [ ...list of tools... ]
+
+
 
 Answer: 29
 
-🔑 Requirements
+```
 
-    Python 3.11 or newer
 
-    OpenAI API key (client only)
 
-📢 Why MCP-123?
+---
 
-    Zero boilerplate – just write functions.
 
-    LLM-native – built for OpenAI function-calling & friends.
 
-    Extensible – add a new tool by adding a new function.
+## 🔑 Requirements
 
-🤝 Credits
+- Python 3.11+
 
-    Built with https://github.com/typpo/fastmcp
+- OpenAI API key (for the client)
 
-    Inspired by the Model Context Protocol (MCP)
 
-📬 Feedback & Contributions
 
-Issues welcome, and PULL REQUESTS IN ALL CAPS are extra welcome. 😉
+---
+
+
+
+## 📢 Why MCP123?
+
+- **Zero boilerplate**: No need to write schemas or wrappers—just write functions.
+
+- **LLM-native**: Designed for seamless LLM tool use.
+
+- **Extensible**: Add more tools by simply adding functions.
+
+
+
+---
+
+
+
+## 🤝 Credits
+
+- Built with [FastMCP](https://github.com/typpo/fastmcp)
+
+- Inspired by the Model Context Protocol (MCP)
+
+
+
+---
+
+
+
+## 📬 Feedback & Contributions
+
+Pull requests and issues are welcome, as long as Pull Requests are in all-caps.
