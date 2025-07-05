@@ -1,0 +1,10 @@
+# pyproject.toml (excerpt)
+[project]
+name = "mcp123"
+version = "0.1.0"
+dependencies = [
+    "uvicorn==0.34.2",
+    "openai==1.93.0",
+    "fastmcp==2.10.1",
+    "mcp==1.10.1"
+]
