@@ -1,4 +1,4 @@
-from mcp123.client import McpClient
+from mcp123_client import McpClient
 
 # 1️⃣ create client (auto-discovers tools)
 client = McpClient(
