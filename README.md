@@ -46,12 +46,18 @@ server.run_server("tools.py", port=9999)
 ```python
 from mcp123.client import McpClient
 client = McpClient("http://localhost:9999", "sk-...your OpenAI key...")
+```
 
 ### 5. Use the MCP Client
+
+```
 answer = client.ask("Add 15 and 14.")
 print("Answer:", answer)
+```
 
 ### 6. Close the MCP Client when you are done
+
+```
 client.close()
 ```
 
